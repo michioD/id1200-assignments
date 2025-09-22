@@ -4,11 +4,16 @@
 #include <sys/wait.h>
 #include <time.h>
 
-#define N 100 
+// #define N 100 
 
-int main() {
-    srand(time(NULL));
- 
+int main(int argc, char *argv[]) {
+    // argv points to argv[0]
+    // argv[0] points to the program ./q7
+    // argv[1] points to the N value you enter 
+    int N = atoi(argv[1]);
+
+    srand(time(NULL)); 
+
     // allocate memory on heap for N floats
     // set array to point to the first address   
     float *array = (float *)malloc(N * sizeof(float));
