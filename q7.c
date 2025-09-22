@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
     if (pid2 == 0){
         close(pipe2[0]);
         float sum2 = 0;
-        for (int i = N; i < N; i++){
+        for (int i = N/2; i < N; i++){
             sum2 += array[i];
         }
         write(pipe2[1], &sum2, sizeof(sum2));
